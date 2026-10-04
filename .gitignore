@@ -1,0 +1,32 @@
+# --- Secrets ---------------------------------------------------------------
+# The real environment file holds the Portkey API key. Only .env.example is committed.
+.env
+.env.*
+!.env.example
+
+# --- Course data pack (local only) -------------------------------------------
+# The database and product images are provided separately; place them in data/.
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Python ----------------------------------------------------------------
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# --- Frontend --------------------------------------------------------------
+node_modules/
+dist/
+
+# --- Runtime files ---------------------------------------------------------
+# Lock and temp files written while appending to output/audit_trail.json.
+output/.audit_trail.lock
+output/.audit-*.json
+
+# --- OS / editor -----------------------------------------------------------
+.DS_Store
+.vscode/
+.idea/

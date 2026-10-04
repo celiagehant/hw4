@@ -1,0 +1,293 @@
+[
+  {
+    "run_id": "5add17998098",
+    "event": "run_start",
+    "time": "2026-10-04T23:26:53.190+00:00",
+    "customer": "guest",
+    "page_type": "home",
+    "page_product_id": null,
+    "history_turns": 0,
+    "message_chars": 30
+  },
+  {
+    "run_id": "5add17998098",
+    "event": "tool_call",
+    "time": "2026-10-04T23:26:56.599+00:00",
+    "tool": "recommend_products",
+    "args": {
+      "keywords": "Yale",
+      "category": "hoodies",
+      "max_price": 50,
+      "in_stock_only": true
+    },
+    "result": "2 matches, 2 recommended; first: Yale Sports Hoodie Tennis, Ua Gameday Double Knit Hood"
+  },
+  {
+    "run_id": "5add17998098",
+    "event": "run_end",
+    "time": "2026-10-04T23:26:58.782+00:00",
+    "stop_reason": "final_result",
+    "model_requests": 2,
+    "tool_calls": 1,
+    "tokens": {
+      "input": 11239,
+      "output": 172
+    },
+    "product_cards_returned": 2
+  },
+  {
+    "run_id": "e541ef71ae73",
+    "event": "run_start",
+    "time": "2026-10-04T23:26:58.824+00:00",
+    "customer": "guest",
+    "page_type": "product_detail",
+    "page_product_id": "yale-grandpa-crewneck",
+    "history_turns": 0,
+    "message_chars": 24
+  },
+  {
+    "run_id": "e541ef71ae73",
+    "event": "tool_call",
+    "time": "2026-10-04T23:27:00.214+00:00",
+    "tool": "check_size_stock",
+    "args": {
+      "product": "yale-grandpa-crewneck",
+      "size": "XL"
+    },
+    "result": "Yale Grandpa Crewneck: status in_stock, size XL, quantity 15"
+  },
+  {
+    "run_id": "e541ef71ae73",
+    "event": "run_end",
+    "time": "2026-10-04T23:27:01.839+00:00",
+    "stop_reason": "final_result",
+    "model_requests": 2,
+    "tool_calls": 1,
+    "tokens": {
+      "input": 11208,
+      "output": 112
+    },
+    "product_cards_returned": 1
+  },
+  {
+    "run_id": "12ace318a8e1",
+    "event": "run_start",
+    "time": "2026-10-04T23:27:01.878+00:00",
+    "customer": "guest",
+    "page_type": "home",
+    "page_product_id": null,
+    "history_turns": 0,
+    "message_chars": 100
+  },
+  {
+    "run_id": "12ace318a8e1",
+    "event": "tool_call",
+    "time": "2026-10-04T23:27:03.688+00:00",
+    "tool": "search_products",
+    "args": {
+      "category": "t-shirts",
+      "query": "navy"
+    },
+    "result": "19 matches, 12 returned; first: 2025 Yale Vs Harvard T Shirt, Boola Boola T Shirt, District Tri Blend T Shirt Vintage Shield"
+  },
+  {
+    "run_id": "12ace318a8e1",
+    "event": "run_end",
+    "time": "2026-10-04T23:27:07.692+00:00",
+    "stop_reason": "final_result",
+    "model_requests": 2,
+    "tool_calls": 1,
+    "tokens": {
+      "input": 12717,
+      "output": 335
+    },
+    "product_cards_returned": 12
+  },
+  {
+    "run_id": "691afb9c1872",
+    "event": "run_start",
+    "time": "2026-10-04T23:27:07.734+00:00",
+    "customer": "guest",
+    "page_type": "home",
+    "page_product_id": null,
+    "history_turns": 0,
+    "message_chars": 95
+  },
+  {
+    "run_id": "691afb9c1872",
+    "event": "tool_call",
+    "time": "2026-10-04T23:27:09.623+00:00",
+    "tool": "list_garment_types",
+    "args": {},
+    "result": "21 items"
+  },
+  {
+    "run_id": "691afb9c1872",
+    "event": "run_end",
+    "time": "2026-10-04T23:27:12.712+00:00",
+    "stop_reason": "final_result",
+    "model_requests": 2,
+    "tool_calls": 1,
+    "tokens": {
+      "input": 11456,
+      "output": 133
+    },
+    "product_cards_returned": 0
+  },
+  {
+    "run_id": "1df5fdea4272",
+    "event": "run_start",
+    "time": "2026-10-04T23:27:12.753+00:00",
+    "customer": "guest",
+    "page_type": "home",
+    "page_product_id": null,
+    "history_turns": 0,
+    "message_chars": 72
+  },
+  {
+    "run_id": "1df5fdea4272",
+    "event": "tool_call",
+    "time": "2026-10-04T23:27:14.547+00:00",
+    "tool": "list_garment_types",
+    "args": {},
+    "result": "21 items"
+  },
+  {
+    "run_id": "1df5fdea4272",
+    "event": "run_end",
+    "time": "2026-10-04T23:27:16.755+00:00",
+    "stop_reason": "final_result",
+    "model_requests": 2,
+    "tool_calls": 1,
+    "tokens": {
+      "input": 11457,
+      "output": 135
+    },
+    "product_cards_returned": 0
+  },
+  {
+    "run_id": "fd81cfafba56",
+    "event": "run_start",
+    "time": "2026-10-04T23:27:16.936+00:00",
+    "customer": "authenticated",
+    "page_type": "account",
+    "page_product_id": null,
+    "history_turns": 6,
+    "message_chars": 85
+  },
+  {
+    "run_id": "fd81cfafba56",
+    "event": "run_end",
+    "time": "2026-10-04T23:27:19.979+00:00",
+    "stop_reason": "final_result",
+    "model_requests": 1,
+    "tool_calls": 0,
+    "tokens": {
+      "input": 5816,
+      "output": 265
+    },
+    "product_cards_returned": 0
+  },
+  {
+    "run_id": "7cf6c620dfa1",
+    "event": "run_start",
+    "time": "2026-10-04T23:27:20.046+00:00",
+    "customer": "authenticated",
+    "page_type": "home",
+    "page_product_id": null,
+    "history_turns": 8,
+    "message_chars": 40
+  },
+  {
+    "run_id": "7cf6c620dfa1",
+    "event": "tool_call",
+    "time": "2026-10-04T23:27:21.718+00:00",
+    "tool": "recommend_products",
+    "args": {
+      "category": "crewnecks",
+      "max_price": 60,
+      "size": "M",
+      "in_stock_only": true
+    },
+    "result": "22 matches, 6 recommended; first: Hype And Vice Yale University Offside Crewneck, Super Heavyweight Crewneck Arched Yale Crest, Yale Brother Crewneck"
+  },
+  {
+    "run_id": "7cf6c620dfa1",
+    "event": "run_end",
+    "time": "2026-10-04T23:27:23.783+00:00",
+    "stop_reason": "final_result",
+    "model_requests": 2,
+    "tool_calls": 1,
+    "tokens": {
+      "input": 12935,
+      "output": 215
+    },
+    "product_cards_returned": 6
+  },
+  {
+    "run_id": "32ffea6e2fd5",
+    "event": "run_start",
+    "time": "2026-10-04T23:27:23.834+00:00",
+    "customer": "guest",
+    "page_type": "home",
+    "page_product_id": null,
+    "history_turns": 0,
+    "message_chars": 84
+  },
+  {
+    "run_id": "32ffea6e2fd5",
+    "event": "tool_call",
+    "time": "2026-10-04T23:27:26.085+00:00",
+    "tool": "search_products",
+    "args": {
+      "query": "Yale Mom Hoodie"
+    },
+    "result": "28 matches, 12 returned; first: Yale Mom Hoodie, Basic Hoodie Big Yale, Brooks Brothers Double Knit Full Zip Hoodie Yale"
+  },
+  {
+    "run_id": "32ffea6e2fd5",
+    "event": "run_end",
+    "time": "2026-10-04T23:27:28.368+00:00",
+    "stop_reason": "final_result",
+    "model_requests": 2,
+    "tool_calls": 1,
+    "tokens": {
+      "input": 12781,
+      "output": 171
+    },
+    "product_cards_returned": 1
+  },
+  {
+    "run_id": "a3e8902a76a4",
+    "event": "run_start",
+    "time": "2026-10-04T23:28:01.255+00:00",
+    "customer": "guest",
+    "page_type": null,
+    "page_product_id": null,
+    "history_turns": 0,
+    "message_chars": 49
+  },
+  {
+    "run_id": "a3e8902a76a4",
+    "event": "tool_call",
+    "time": "2026-10-04T23:28:03.702+00:00",
+    "tool": "check_size_stock",
+    "args": {
+      "product": "Basic Hoodie Big Yale",
+      "size": "medium"
+    },
+    "result": "Basic Hoodie Big Yale: status low_stock, size M, quantity 5"
+  },
+  {
+    "run_id": "a3e8902a76a4",
+    "event": "run_end",
+    "time": "2026-10-04T23:28:03.715+00:00",
+    "stop_reason": "request_limit_reached (1 model requests)",
+    "model_requests": 1,
+    "tool_calls": 1,
+    "tokens": {
+      "input": 5378,
+      "output": 40
+    }
+  }
+]

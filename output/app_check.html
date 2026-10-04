@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Customs — Problem 11 App Check</title>
+    <style>
+      body {
+        margin: 0;
+        background: #faf8f3;
+        color: #0f1b2d;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.6;
+      }
+      main {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem 4rem;
+      }
+      h1 {
+        margin: 0 0 0.5rem;
+        color: #00356b;
+        font-family: Georgia, serif;
+        font-size: 2.2rem;
+      }
+      .intro {
+        margin: 0 0 2.5rem;
+        color: #3a4556;
+      }
+      section {
+        margin-bottom: 3rem;
+        padding: 1.5rem;
+        border: 1px solid #e6e1d6;
+        border-radius: 12px;
+        background: #fff;
+      }
+      h2 {
+        margin: 0 0 1rem;
+        font-size: 1.35rem;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid #e6e1d6;
+        border-radius: 8px;
+      }
+      .caption {
+        margin: 1rem 0 0;
+        font-size: 1.02rem;
+      }
+      .meta {
+        margin: 0.4rem 0 0;
+        color: #5b6472;
+        font-size: 0.88rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Campus Customs — Problem 11 App Check</h1>
+      <p class="intro">
+        This page documents tests of the live Campus Customs website (React frontend, FastAPI backend and the PydanticAI
+        agent “Dan”), run on October 4, 2026. Every screenshot is a real capture of the running site taken by a
+        browser; nothing is mocked.
+      </p>
+
+      <section id="inventory">
+        <h2>1. Inventory Chat Lookup</h2>
+        <img
+          src="app_check_images/inventory.png"
+          alt="Chat panel: the customer asks how many Basic Hoodie Big Yale hoodies are in stock in medium, and Dan replies that there are 5 in medium (M), low stock, with the product card showing $68.00."
+        />
+        <p class="caption">
+          Asked “How many Basic Hoodie Big Yale hoodies do you have in medium?”, the agent answered “We have 5 … in
+          medium (M), that’s low stock” and showed the product card at $68.00. This matches the database exactly
+          (<code>inventory</code>: size M, quantity 5; <code>catalogue</code>: price 68.0), showing the stock figure comes from
+          the database and is not invented.
+        </p>
+      </section>
+
+      <section id="search-cards">
+        <h2>2. Dynamic Search-Result Cards</h2>
+        <img
+          src="app_check_images/search_cards.png"
+          alt="Chat panel: the customer asks 'Show me Yale hoodies.', Dan replies that the catalogue has 27 options, and product cards with images, names, prices and descriptions appear in the conversation."
+        />
+        <p class="caption">
+          Asked “Show me Yale hoodies.” on the home page, the agent replied that the catalogue has 27 hoodies, and the
+          chat rendered product cards (image, name, price, short description, View Product / Add to Cart) inside the
+          conversation. These cards appeared only in response to the message: they were built from the agent’s
+          structured product-search result (12 matches returned), since the home page behind the chat has no product
+          grid.
+        </p>
+      </section>
+
+      <section id="p9-usability">
+        <h2>3. Problem 9 Usability Feature — Product Search, Filtering and Sorting</h2>
+        <img
+          src="app_check_images/p9_usability.png"
+          alt="Products page with filters set to Category Hoodies, Size in stock M, Max price 70 and Sort Price low to high, showing 19 products starting with two $45.00 hoodies followed by $68.00 hoodies."
+        />
+        <p class="caption">
+          With Category “Hoodies”, Size in stock “M”, Max price 70 and “Price: low to high” selected, the Products page
+          narrowed 102 products to 19 hoodies ordered from $45.00 up. That matches the backend API for the same filters
+          (19 results, first two $45.00), showing filtering and sorting working together on live database data.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
